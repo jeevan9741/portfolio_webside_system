@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jeevan — Java Full Stack Developer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="#home" class="logo">J<span>.</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <p class="hero-hi">Hi there 👋, I'm</p>
+      <h1>Jeevan</h1>
+      <h2 class="typing" id="typing"></h2>
+      <p class="hero-desc">
+        Java Full Stack Developer building scalable web applications with
+        Java, Spring Boot, REST APIs and MySQL. Passionate about problem-solving,
+        DSA and real-world software solutions.
+      </p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="Jeevan_Resume.pdf" download class="btn btn-outline">📄 Download Resume</a>
+      </div>
+      <div class="socials">
+        <a href="https://github.com/jeevan9741" target="_blank" aria-label="GitHub">GitHub</a>
+        <a href="https://www.linkedin.com/in/jeevan-480468335" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+        <a href="mailto:chavanjeevan01@gmail.com" aria-label="Email">Email</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <h2 class="section-title">About <span>Me</span></h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>
+          I'm a Computer Science Engineering graduate (2026) with hands-on
+          experience in Java, Spring Boot, and MySQL backend development.
+          I'm skilled in developing RESTful APIs, designing database-driven
+          applications, and applying Object-Oriented Programming principles.
+        </p>
+        <p>
+          With a strong foundation in Data Structures &amp; Algorithms, SQL,
+          and a passion for building scalable, high-quality software solutions,
+          I'm seeking Software Developer, Backend Developer, and Full Stack
+          Developer opportunities where I can contribute and grow.
+        </p>
+        <ul class="about-facts">
+          <li><strong>📍 Location:</strong> Bengaluru, Karnataka, India</li>
+          <li><strong>💼 Role:</strong> Java Full Stack Developer</li>
+          <li><strong>🎓 Education:</strong> B.E. CSE, City Engineering College, Bengaluru (2022 – 2026) · CGPA: 7.88/10</li>
+        </ul>
+      </div>
+      <div class="about-stats">
+        <div class="stat"><span>7.88</span><p>CGPA / 10</p></div>
+        <div class="stat"><span>2+</span><p>Major Projects</p></div>
+        <div class="stat"><span>2</span><p>Certifications</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section section-alt">
+    <h2 class="section-title">My <span>Skills</span></h2>
+    <div class="skills-grid">
+      <div class="skill-card">Java</div>
+      <div class="skill-card">Python</div>
+      <div class="skill-card">Spring Boot</div>
+      <div class="skill-card">FastAPI</div>
+      <div class="skill-card">REST APIs</div>
+      <div class="skill-card">React.js</div>
+      <div class="skill-card">JavaScript</div>
+      <div class="skill-card">LangChain · OpenAI API</div>
+      <div class="skill-card">MySQL</div>
+      <div class="skill-card">PostgreSQL</div>
+      <div class="skill-card">DSA</div>
+      <div class="skill-card">OOP</div>
+      <div class="skill-card">Git &amp; GitHub</div>
+      <div class="skill-card">Google Cloud</div>
+      <div class="skill-card">HTML5 &amp; CSS3</div>
+    </div>
+    <h3 class="subsection-title">Certifications</h3>
+    <ul class="cert-list">
+      <li>🎓 Infosys Springboard — Java Programming Fundamentals Certification</li>
+      <li>🎓 NPTEL — Data Structures and Algorithms Using Java Certification</li>
+    </ul>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section">
+    <h2 class="section-title">My <span>Experience</span></h2>
+    <div class="projects-grid">
+      <article class="project-card">
+        <div class="project-body">
+          <h3>Java Full Stack Developer Intern</h3>
+          <p class="exp-meta">Festiva Moments · Bengaluru · Dec 2025 – May 2026</p>
+          <ul class="exp-list">
+            <li>Developed and maintained backend modules using Java, Spring Boot, and OOP principles for scalable web applications.</li>
+            <li>Designed and implemented RESTful APIs for user management, authentication, and business workflows.</li>
+            <li>Integrated MySQL databases and optimized SQL queries to improve performance and data retrieval efficiency.</li>
+            <li>Collaborated in Agile sprints — sprint planning, code reviews, and feature delivery.</li>
+            <li>Implemented exception handling, input validation, and logging to enhance reliability.</li>
+            <li>Applied Java Collections Framework and Multithreading to build efficient, reusable code components.</li>
+          </ul>
+          <div class="tags"><span>Java</span><span>Spring Boot</span><span>MySQL</span><span>REST APIs</span><span>Git</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section section-alt">
+    <h2 class="section-title">My <span>Projects</span></h2>
+    <div class="projects-grid">
+      <article class="project-card">
+        <div class="project-img p1"></div>
+        <div class="project-body">
+          <h3>AI-Powered Farmer Advisory System</h3>
+          <p>Full-stack app assisting farmers with crop management, disease detection, and advisory services.</p>
+          <ul class="exp-list">
+            <li>Designed RESTful APIs with Spring Boot and MySQL for farmer and crop data.</li>
+            <li>Integrated Gemini AI API for crop image disease identification and treatment suggestions.</li>
+            <li>Built crop recommendation and AI advisor modules for personalized farming guidance.</li>
+            <li>Developed a responsive React.js dashboard with auth, market price tracking, and disease detection.</li>
+          </ul>
+          <div class="tags"><span>Spring Boot</span><span>React.js</span><span>MySQL</span><span>Gemini AI</span></div>
+          <div class="project-links">
+            <a href="https://github.com/jeevan9741" target="_blank">Code →</a>
+          </div>
+        </div>
+      </article>
+      <article class="project-card">
+        <div class="project-img p2"></div>
+        <div class="project-body">
+          <h3>Voice Morphing Detection System</h3>
+          <p>AI-powered smart home security that detects morphed/spoofed voice commands before granting access.</p>
+          <ul class="exp-list">
+            <li>Implemented audio preprocessing and MFCC-based feature extraction to analyze voice characteristics.</li>
+            <li>Built and trained ML models to classify genuine vs morphed voice samples.</li>
+            <li>Integrated IoT components for real-time voice-based access control and monitoring.</li>
+            <li>Designed a secure authentication workflow preventing voice spoofing attacks.</li>
+          </ul>
+          <div class="tags"><span>Python</span><span>Machine Learning</span><span>IoT</span><span>Audio Processing</span></div>
+          <div class="project-links">
+            <a href="https://github.com/jeevan9741" target="_blank">Code →</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- MORE PROJECTS (GitHub repos) -->
+  <section id="more-projects" class="section">
+    <h2 class="section-title">More <span>Projects</span></h2>
+    <div class="mini-grid">
+      <a class="mini-card" href="https://github.com/jeevan9741/train-ticket-booking-system" target="_blank">
+        <h3>🚆 Train Ticket Booking System</h3><p>Java</p>
+      </a>
+      <a class="mini-card" href="https://github.com/jeevan9741/bank-transaction-system" target="_blank">
+        <h3>🏦 Bank Transaction System</h3><p>Java</p>
+      </a>
+      <a class="mini-card" href="https://github.com/jeevan9741/student-management-system" target="_blank">
+        <h3>🎓 Student Management System</h3><p>Java</p>
+      </a>
+      <a class="mini-card" href="https://github.com/jeevan9741/Ai_object_detection-_system" target="_blank">
+        <h3>👁️ AI Object Detection System</h3><p>JavaScript</p>
+      </a>
+      <a class="mini-card" href="https://github.com/jeevan9741/footer_website" target="_blank">
+        <h3>🧩 Footer Website</h3><p>CSS</p>
+      </a>
+      <a class="mini-card" href="https://github.com/jeevan9741" target="_blank">
+        <h3>🌐 Portfolio Website</h3><p>HTML — this site!</p>
+      </a>
+    </div>
+  </section>
+  <section id="contact" class="section section-alt">
+    <h2 class="section-title">Contact <span>Me</span></h2>
+    <form class="contact-form" id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+      <p class="form-note" id="formNote"></p>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 Jeevan · Built with ❤️ and vanilla code</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
