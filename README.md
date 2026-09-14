@@ -2,7 +2,7 @@
 
 My personal portfolio website — a modern, fully responsive one-page site built with **vanilla HTML, CSS, and JavaScript** (no frameworks, no build tools).
 
-🔗 **Live site:** [https://jeevan9741.github.io/portfolio-website/](https://jeevan9741.github.io/portfolio-website/) *(enable GitHub Pages → Settings → Pages → deploy from `main` branch)*
+🔗 **Live site:** [https://jeevan9741.github.io/portfolio-website/](https://jeevan9741.github.io/portfolio-website/) _(enable GitHub Pages → Settings → Pages → deploy from `main` branch)_
 
 ## 👤 About Me
 
@@ -21,11 +21,11 @@ Java Full Stack Developer from Bengaluru, India. B.E. in Computer Science (City 
 
 ## 🛠️ Tech Stack
 
-| Category | Technologies |
-|---|---|
-| Frontend | HTML5, CSS3, JavaScript (Vanilla) |
-| Deployment | GitHub Pages |
-| Design | CSS Grid/Flexbox, CSS animations, gradient accents |
+| Category   | Technologies                                       |
+| ---------- | -------------------------------------------------- |
+| Frontend   | HTML5, CSS3, JavaScript (Vanilla)                  |
+| Deployment | GitHub Pages                                       |
+| Design     | CSS Grid/Flexbox, CSS animations, gradient accents |
 
 ## 📂 Project Structure
 
@@ -57,4 +57,5 @@ npx serve .
 - **Phone:** +91 97412 14239
 
 ---
+
 © 2026 Jeevan Chauhan — Designed & built in Bengaluru 🇮🇳
