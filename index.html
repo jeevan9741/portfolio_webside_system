@@ -3,283 +3,621 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jeevan — Java Full Stack Developer</title>
+  <title>Jeevan Chauhan — Java Full Stack Developer</title>
+  <meta name="description" content="Jeevan Chauhan — Java Full Stack Developer from Bengaluru. Spring Boot, REST APIs, MySQL, React.js and AI integrations." />
+  <meta name="author" content="Jeevan Chauhan" />
+  <meta name="theme-color" content="#0b0d12" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Jeevan Chauhan — Java Full Stack Developer" />
+  <meta property="og:description" content="Spring Boot · REST APIs · MySQL · React.js · DSA. Open to Software, Backend and Full Stack roles." />
+  <meta property="og:url" content="https://jeevan9741.github.io/portfolio_webside_system/" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%235b7cfa'/%3E%3Ctext x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='Segoe UI,Arial' font-weight='800' font-size='30' fill='white'%3EJC%3C/text%3E%3C/svg%3E" />
+  <script>
+    // Apply saved/system theme before paint to avoid a flash
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem("theme"); } catch (e) {}
+      if (!t) t = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", t);
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- ICON SPRITE -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-github" viewBox="0 0 16 16"><path fill="currentColor" stroke="none" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></symbol>
+      <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+      <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></symbol>
+      <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+      <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></symbol>
+      <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+      <symbol id="i-cap" viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></symbol>
+      <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.48 12.89 17 22l-5-3-5 3 1.52-9.11"/></symbol>
+      <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+      <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.9 5.8L20 11l-6.1 2.2L12 19l-1.9-5.8L4 11l6.1-2.2z"/></symbol>
+      <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></symbol>
+      <symbol id="i-repo" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></symbol>
+      <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></symbol>
+      <symbol id="i-mic" viewBox="0 0 24 24"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><path d="M12 19v3"/></symbol>
+      <symbol id="i-truck" viewBox="0 0 24 24"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+      <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+      <symbol id="i-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/></symbol>
+      <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></symbol>
+      <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M7 4v16l13-8z"/></symbol>
+      <symbol id="i-video" viewBox="0 0 24 24"><path d="m22 8-6 4 6 4z"/><rect x="2" y="6" width="14" height="12" rx="2"/></symbol>
+      <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></symbol>
+      <symbol id="i-rocket" viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15 9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></symbol>
+      <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+    </defs>
+  </svg>
+
+  <a href="#main" class="skip-link">Skip to content</a>
+  <div class="progress" id="progress" aria-hidden="true"></div>
 
   <!-- NAVBAR -->
-  <nav class="navbar">
-    <a href="#home" class="logo">Jeevan<span>.</span></a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#contact">Say Hello</a></li>
-    </ul>
-    <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+  <nav class="navbar" aria-label="Primary">
+    <div class="container nav-inner">
+      <a href="#home" class="brand" aria-label="Jeevan Chauhan — home">
+        <span class="brand-mark">JC</span>
+        <span class="brand-name">Jeevan Chauhan</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="nav-cta-mobile"><a href="resume.pdf" download>Download Resume</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Dark theme" aria-pressed="true" title="Toggle theme">
+          <svg class="i i-sun"><use href="#i-sun" /></svg>
+          <svg class="i i-moon"><use href="#i-moon" /></svg>
+        </button>
+        <a href="resume.pdf" download class="btn btn-sm btn-primary nav-cta">
+          <svg class="i"><use href="#i-download" /></svg> Resume
+        </a>
+        <button class="icon-btn hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+          <svg class="i"><use href="#i-menu" /></svg>
+        </button>
+      </div>
+    </div>
   </nav>
 
   <!-- HERO -->
   <header id="home" class="hero">
-    <div class="hero-inner">
-      <span class="badge"><span class="dot"></span> Open to opportunities</span>
-      <h1 class="hero-name">Jeevan<br /><span class="thin">Chauhan</span></h1>
-      <p class="hero-role">Java Full Stack Developer · Spring Boot · REST APIs · MySQL · DSA</p>
-      <p class="hero-desc">
-        Computer Science graduate from Bengaluru who turns requirements into
-        reliable, production-ready backend systems — from REST APIs and
-        authentication to optimized SQL and clean, reusable Java.
-      </p>
-      <div class="hero-btns">
-        <a href="#projects" class="btn btn-primary">View Projects →</a>
-        <a href="resume.pdf" download class="btn btn-outline">Download Resume</a>
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <span class="badge"><span class="dot"></span> Available for full-time roles · 2026</span>
+        <p class="hero-hello">Hi, I'm Jeevan Chauhan</p>
+        <h1 class="hero-title">Java Full Stack Developer building <span class="grad">reliable backend systems.</span></h1>
+        <p class="hero-lead">
+          Computer Science graduate from Bengaluru who turns requirements into
+          production-ready software — from secure REST APIs and authentication to
+          optimized SQL and clean, reusable Java.
+        </p>
+        <div class="hero-btns">
+          <a href="#projects" class="btn btn-primary">View my work <svg class="i"><use href="#i-arrow-right" /></svg></a>
+          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com/jeevan9741" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg class="i"><use href="#i-github" /></svg></a>
+          <a href="https://www.linkedin.com/in/jeevan-480468335" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg class="i"><use href="#i-linkedin" /></svg></a>
+          <a href="mailto:chavanjeevan01@gmail.com" aria-label="Email"><svg class="i"><use href="#i-mail" /></svg></a>
+          <span class="hero-loc"><svg class="i"><use href="#i-pin" /></svg> Bengaluru, India</span>
+        </div>
       </div>
-      <div class="socials">
-        <a href="https://github.com/jeevan9741" target="_blank">GitHub ↗</a>
-        <a href="https://www.linkedin.com/in/jeevan-480468335" target="_blank">LinkedIn ↗</a>
-        <a href="mailto:chavanjeevan01@gmail.com">Email ↗</a>
-        <a href="tel:+919741214239">+91 97412 14239</a>
-      </div>
-    </div>
-    <a href="#about" class="scroll-hint">Scroll ↓</a>
-  </header>
 
-  <!-- TECH MARQUEE -->
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee-track" id="marqueeTrack">
-      <span>Java</span><span>Spring Boot</span><span>MySQL</span><span>REST APIs</span>
-      <span>Python</span><span>FastAPI</span><span>LangChain</span><span>OpenAI API</span>
-      <span>React.js</span><span>Git &amp; GitHub</span><span>DSA</span><span>OOP</span>
-    </div>
-  </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="code-window">
+          <div class="code-bar">
+            <span class="tl r"></span><span class="tl y"></span><span class="tl g"></span>
+            <span class="code-file">Developer.java</span>
+          </div>
+<pre class="code"><code><span class="a">@RestController</span>
+<span class="k">public class</span> <span class="t">Developer</span> {
 
-  <!-- 01 ABOUT -->
-  <section id="about" class="section">
-    <div class="section-head">
-      <span class="section-num">01</span>
-      <h2>From learning<br />to production</h2>
-    </div>
-    <div class="about-grid">
-      <div class="about-text">
-        <p>
-          I'm <strong>Jeevan</strong> — a Computer Science Engineering graduate (2026)
-          from Bengaluru with hands-on experience in Java, Spring Boot, and MySQL
-          backend development.
-        </p>
-        <p>
-          At Festiva Moments I designed RESTful APIs for user management and
-          authentication, integrated and optimized MySQL databases, and shipped
-          features in an Agile team with sprint planning and code reviews.
-        </p>
-        <p>
-          My core strength is the fundamentals — Data Structures &amp; Algorithms,
-          Object-Oriented Programming, and SQL — applied to build scalable,
-          high-quality software. I'm now looking for Software Developer, Backend
-          Developer, and Full Stack Developer opportunities.
-        </p>
-      </div>
-      <div class="fact-grid">
-        <div class="fact"><span class="fact-label">/01</span><h4>Based In</h4><p>Bengaluru, India</p></div>
-        <div class="fact"><span class="fact-label">/02</span><h4>Education</h4><p>B.E. CSE · CGPA 7.88/10</p></div>
-        <div class="fact"><span class="fact-label">/03</span><h4>Focus</h4><p>Full Stack + DSA</p></div>
-        <div class="fact"><span class="fact-label">/04</span><h4>Interest</h4><p>Backend · AI Integrations</p></div>
-      </div>
-    </div>
-  </section>
+  <span class="t">String</span> name     = <span class="s">"Jeevan Chauhan"</span>;
+  <span class="t">String</span> role     = <span class="s">"Full Stack Developer"</span>;
+  <span class="t">String</span> location = <span class="s">"Bengaluru, IN"</span>;
 
-  <!-- 02 EXPERIENCE -->
-  <section id="experience" class="section section-alt">
-    <div class="section-head">
-      <span class="section-num">02</span>
-      <h2>The journey<br />so far</h2>
-    </div>
-    <div class="timeline">
-      <article class="exp-card">
-        <div class="exp-top">
-          <h3>Festiva Moments</h3>
-          <span class="exp-date">Dec 2025 — May 2026</span>
-        </div>
-        <p class="exp-role">Java Full Stack Developer Intern · Bengaluru, India</p>
-        <ul class="exp-list">
-          <li>Developed and maintained backend modules using Java, Spring Boot, and OOP principles for scalable web applications.</li>
-          <li>Designed and implemented RESTful APIs for user management, authentication, and business workflows, ensuring secure and efficient data exchange.</li>
-          <li>Integrated MySQL databases with backend services and optimized SQL queries to improve performance and data retrieval efficiency.</li>
-          <li>Collaborated in Agile development — sprint planning, code reviews, and feature delivery across cross-functional teams.</li>
-          <li>Implemented exception handling, input validation, and logging mechanisms to enhance reliability and maintainability.</li>
-          <li>Applied Java Collections Framework and Multithreading to develop efficient, reusable code components.</li>
-        </ul>
-        <div class="tags">
-          <span>Java</span><span>Spring Boot</span><span>MySQL</span><span>REST APIs</span>
-          <span>OOP</span><span>Git</span><span>Agile</span>
-        </div>
-      </article>
-    </div>
-  </section>
+  <span class="t">List</span>&lt;<span class="t">String</span>&gt; stack = <span class="t">List</span>.<span class="f">of</span>(
+    <span class="s">"Java"</span>, <span class="s">"Spring Boot"</span>, <span class="s">"MySQL"</span>,
+    <span class="s">"REST APIs"</span>, <span class="s">"React.js"</span>
+  );
 
-  <!-- 03 PROJECTS -->
-  <section id="projects" class="section">
-    <div class="section-head">
-      <span class="section-num">03</span>
-      <h2>Recent<br />projects</h2>
+  <span class="a">@GetMapping</span>(<span class="s">"/hire"</span>)
+  <span class="k">public</span> <span class="t">Status</span> <span class="f">available</span>() {
+    <span class="k">return</span> <span class="t">Status</span>.<span class="n">OPEN_TO_WORK</span>;
+  }
+}</code></pre>
+        </div>
+        <div class="float-card fc-1">
+          <svg class="i"><use href="#i-briefcase" /></svg>
+          <div><strong>Java Full Stack Intern</strong><span>Festiva Moments</span></div>
+        </div>
+        <div class="float-card fc-2">
+          <svg class="i"><use href="#i-cap" /></svg>
+          <div><strong>B.E. CSE · 7.88</strong><span>Class of 2026</span></div>
+        </div>
+      </div>
     </div>
-    <div class="proj-grid">
-      <article class="proj-card big">
-        <div class="proj-top">
-          <span class="proj-cat">01 · Full Stack + AI</span>
-          <h3>AI-Powered Farmer Advisory System</h3>
-        </div>
-        <p>
-          Full-stack web app assisting farmers with crop management, disease
-          detection, and advisory services. Gemini AI analyzes crop images for
-          disease identification and treatment suggestions, while a responsive
-          React.js dashboard handles auth, crop management, market prices, and
-          an AI advisor module — end-to-end integrated via Axios.
-        </p>
-        <div class="tags">
-          <span>Spring Boot</span><span>React.js</span><span>MySQL</span><span>Gemini AI</span><span>REST APIs</span>
-        </div>
-        <a class="proj-link" href="https://github.com/jeevan9741" target="_blank">View on GitHub →</a>
-      </article>
-      <article class="proj-card big">
-        <div class="proj-top">
-          <span class="proj-cat">02 · AI Security</span>
-          <h3>Voice Morphing Detection System</h3>
-        </div>
-        <p>
-          AI-powered smart home security that detects morphed and spoofed voice
-          commands before granting device access. Built MFCC-based feature
-          extraction and trained ML models to classify genuine vs morphed
-          voice, with an IoT-integrated authentication workflow to block voice
-          spoofing attacks in real time.
-        </p>
-        <div class="tags">
-          <span>Python</span><span>Machine Learning</span><span>IoT</span><span>Audio Processing</span>
-        </div>
-        <a class="proj-link" href="https://github.com/jeevan9741" target="_blank">View on GitHub →</a>
-      </article>
-      <article class="proj-card big">
-        <div class="proj-top">
-          <span class="proj-cat">03 · Full Stack</span>
-          <h3>Logistics Tracking System</h3>
-        </div>
-        <p>
-          Shipment management platform with two faces: a staff console to create
-          shipments, advance them through a checkpoint timeline, and search the
-          pipeline, plus a public tracking page where anyone can follow a parcel
-          by tracking number. JWT auth with role-based access (admin vs staff),
-          scrypt-hashed passwords, a REST API, and a single-file SQLite database —
-          with 69 API tests covering auth, CRUD, and public tracking.
-        </p>
-        <div class="tags">
-          <span>React</span><span>TypeScript</span><span>Express</span><span>SQLite</span><span>JWT</span><span>REST APIs</span>
-        </div>
-        <a class="proj-link" href="https://github.com/jeevan9741/Logistics-Tracking-System" target="_blank">View on GitHub →</a>
-      </article>
-    </div>
-    <h3 class="mini-title">More on GitHub</h3>
-    <div class="mini-grid">
-      <a class="mini-card" href="https://github.com/jeevan9741/train-ticket-booking-system" target="_blank">
-        <h4>🚆 Train Ticket Booking System</h4><p>Java</p>
-      </a>
-      <a class="mini-card" href="https://github.com/jeevan9741/bank-transaction-system" target="_blank">
-        <h4>🏦 Bank Transaction System</h4><p>Java</p>
-      </a>
-      <a class="mini-card" href="https://github.com/jeevan9741/student-management-system" target="_blank">
-        <h4>🎓 Student Management System</h4><p>Java</p>
-      </a>
-      <a class="mini-card" href="https://github.com/jeevan9741/Ai_object_detection-_system" target="_blank">
-        <h4>👁️ AI Object Detection System</h4><p>JavaScript</p>
-      </a>
-      <a class="mini-card" href="https://github.com/jeevan9741/footer_website" target="_blank">
-        <h4>🧩 Footer Website</h4><p>CSS</p>
-      </a>
-      <a class="mini-card" href="https://github.com/jeevan9741" target="_blank">
-        <h4>🌐 Portfolio Website</h4><p>HTML — this site!</p>
-      </a>
-    </div>
-  </section>
 
-  <!-- 04 SKILLS -->
-  <section id="skills" class="section section-alt">
-    <div class="section-head">
-      <span class="section-num">04</span>
-      <h2>Tools of<br />the trade</h2>
-    </div>
-    <div class="skill-groups">
-      <div class="skill-group">
-        <h3>Languages &amp; Core CS</h3>
-        <div class="tags">
-          <span>Java (Collections · Multithreading)</span><span>Python</span><span>SQL</span>
-          <span>JavaScript</span><span>HTML5</span><span>CSS3</span><span>DSA</span><span>OOP</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <h3>Frameworks &amp; APIs</h3>
-        <div class="tags">
-          <span>Spring Boot</span><span>FastAPI</span><span>REST APIs</span><span>React.js</span>
-          <span>LangChain</span><span>OpenAI API</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <h3>Databases &amp; Deployment</h3>
-        <div class="tags">
-          <span>MySQL</span><span>PostgreSQL</span><span>Google Cloud</span><span>Git</span>
-          <span>GitHub</span>
-        </div>
-      </div>
-    </div>
-    <div class="certs">
-      <h3>Certifications</h3>
-      <ul>
-        <li>🎓 Infosys Springboard — Java Programming Fundamentals</li>
-        <li>🎓 NPTEL — Data Structures and Algorithms Using Java</li>
+    <div class="container">
+      <ul class="stats" aria-label="Highlights">
+        <li><strong data-count="6">6</strong><span>Months industry experience</span></li>
+        <li><strong data-count="11">11</strong><span>Projects built</span></li>
+        <li><strong data-count="69">69</strong><span>API tests in Logistics project</span></li>
+        <li><strong data-count="7.88" data-decimals="2">7.88</strong><span>CGPA, B.E. Computer Science</span></li>
       </ul>
     </div>
-  </section>
+  </header>
 
-  <!-- 05 EDUCATION -->
-  <section id="education" class="section">
-    <div class="section-head">
-      <span class="section-num">05</span>
-      <h2>Where it<br />all started</h2>
-    </div>
-    <div class="edu-card">
-      <h3>City Engineering College</h3>
-      <p class="edu-deg">Bachelor of Engineering — Computer Science &amp; Engineering</p>
-      <p class="edu-meta">2022 — 2026 · Bengaluru, India · CGPA 7.88 / 10</p>
-    </div>
-  </section>
-
-  <!-- 06 CONTACT -->
-  <section id="contact" class="section section-alt">
-    <div class="section-head">
-      <span class="section-num">06</span>
-      <h2>Let's build<br />something together</h2>
-    </div>
-    <div class="contact-grid">
-      <form class="contact-form" id="contactForm">
-        <input type="text" id="name" placeholder="Your Name" required />
-        <input type="email" id="email" placeholder="Your Email" required />
-        <textarea id="message" rows="5" placeholder="Tell me about your project or just say hi…" required></textarea>
-        <button type="submit" class="btn btn-primary">Send Message →</button>
-        <p class="form-note" id="formNote"></p>
-      </form>
-      <div class="contact-info">
-        <div class="c-item"><h4>Email</h4><a href="mailto:chavanjeevan01@gmail.com">chavanjeevan01@gmail.com</a></div>
-        <div class="c-item"><h4>Phone</h4><a href="tel:+919741214239">+91 97412 14239</a></div>
-        <div class="c-item"><h4>LinkedIn</h4><a href="https://www.linkedin.com/in/jeevan-480468335" target="_blank">/in/jeevan-480468335</a></div>
-        <div class="c-item"><h4>GitHub</h4><a href="https://github.com/jeevan9741" target="_blank">/jeevan9741</a></div>
+  <main id="main" tabindex="-1">
+    <!-- TECH STRIP -->
+    <div class="tech-strip" aria-hidden="true">
+      <div class="marquee-track" id="marqueeTrack">
+        <span><img class="ti" src="assets/icons/java.svg" alt="" width="22" height="22" />Java</span>
+        <span><img class="ti" src="assets/icons/spring.svg" alt="" width="22" height="22" />Spring Boot</span>
+        <span><img class="ti" src="assets/icons/mysql.svg" alt="" width="22" height="22" />MySQL</span>
+        <span><img class="ti" src="assets/icons/react.svg" alt="" width="22" height="22" />React.js</span>
+        <span><img class="ti" src="assets/icons/python.svg" alt="" width="22" height="22" />Python</span>
+        <span><img class="ti" src="assets/icons/fastapi.svg" alt="" width="22" height="22" />FastAPI</span>
+        <span><img class="ti" src="assets/icons/javascript.svg" alt="" width="22" height="22" />JavaScript</span>
+        <span><img class="ti" src="assets/icons/typescript.svg" alt="" width="22" height="22" />TypeScript</span>
+        <span><img class="ti" src="assets/icons/postgresql.svg" alt="" width="22" height="22" />PostgreSQL</span>
+        <span><img class="ti" src="assets/icons/googlecloud.svg" alt="" width="22" height="22" />Google Cloud</span>
+        <span><img class="ti" src="assets/icons/git.svg" alt="" width="22" height="22" />Git</span>
+        <span><img class="ti" src="assets/icons/github.svg" alt="" width="22" height="22" />GitHub</span>
       </div>
     </div>
-  </section>
+
+    <!-- 01 ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow"><span>01</span> About</p>
+          <h2>From learning to production</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-text">
+            <p class="about-lead">
+              I'm a Computer Science Engineering graduate (2026) from Bengaluru with
+              hands-on experience building backend systems in <strong>Java</strong>,
+              <strong>Spring Boot</strong> and <strong>MySQL</strong>.
+            </p>
+            <p>
+              At Festiva Moments I designed RESTful APIs for user management and
+              authentication, integrated and optimized MySQL databases, and shipped
+              features in an Agile team with sprint planning and code reviews.
+            </p>
+            <p>
+              My core strength is the fundamentals — Data Structures &amp; Algorithms,
+              Object-Oriented Programming and SQL — applied to build scalable,
+              high-quality software. I'm currently looking for <strong>Software Developer,
+              Backend Developer</strong> and <strong>Full Stack Developer</strong> roles.
+            </p>
+            <a href="resume.pdf" download class="text-link">Download full resume <svg class="i"><use href="#i-arrow-right" /></svg></a>
+          </div>
+          <ul class="facts">
+            <li><span class="fact-ico"><svg class="i"><use href="#i-pin" /></svg></span><div><h4>Based in</h4><p>Bengaluru, India</p></div></li>
+            <li><span class="fact-ico"><svg class="i"><use href="#i-cap" /></svg></span><div><h4>Education</h4><p>B.E. CSE · CGPA 7.88 / 10</p></div></li>
+            <li><span class="fact-ico"><svg class="i"><use href="#i-target" /></svg></span><div><h4>Focus</h4><p>Backend &amp; Full Stack development</p></div></li>
+            <li><span class="fact-ico"><svg class="i"><use href="#i-spark" /></svg></span><div><h4>Interests</h4><p>Scalable APIs · AI integrations</p></div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 EXPERIENCE -->
+    <section id="experience" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow"><span>02</span> Experience</p>
+          <h2>Where I've worked</h2>
+        </div>
+        <div class="timeline">
+          <article class="exp-card">
+            <div class="exp-head">
+              <span class="exp-logo">FM</span>
+              <div class="exp-title">
+                <h3>Java Full Stack Developer Intern</h3>
+                <p class="exp-company">Festiva Moments</p>
+              </div>
+              <div class="exp-meta">
+                <span><svg class="i"><use href="#i-calendar" /></svg> Dec 2025 — May 2026</span>
+                <span><svg class="i"><use href="#i-pin" /></svg> Bengaluru, India</span>
+              </div>
+            </div>
+            <ul class="exp-list">
+              <li>Developed and maintained backend modules using Java, Spring Boot and OOP principles for scalable web applications.</li>
+              <li>Designed and implemented RESTful APIs for user management, authentication and business workflows, ensuring secure and efficient data exchange.</li>
+              <li>Integrated MySQL databases with backend services and optimized SQL queries to improve performance and data-retrieval efficiency.</li>
+              <li>Collaborated in Agile development — sprint planning, code reviews and feature delivery across cross-functional teams.</li>
+              <li>Implemented exception handling, input validation and logging to improve reliability and maintainability.</li>
+              <li>Applied the Java Collections Framework and multithreading to build efficient, reusable code components.</li>
+            </ul>
+            <div class="tags">
+              <span>Java</span><span>Spring Boot</span><span>MySQL</span><span>REST APIs</span>
+              <span>OOP</span><span>Git</span><span>Agile</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow"><span>03</span> Projects</p>
+          <h2>Selected work</h2>
+          <p class="section-sub">A few projects that show how I approach real problems end to end — from data model and API to the interface people use.</p>
+        </div>
+
+        <div class="group-head">
+          <h3>Featured full-stack projects</h3>
+          <span class="group-note">Major builds</span>
+        </div>
+        <div class="feat-list">
+          <article class="feat-card">
+            <!-- Banner placeholder: replace the .mock block with <img src="assets/careerhub.png" alt="CareerHub screenshot" /> when you have a screenshot -->
+            <div class="feat-cover c-teal" aria-hidden="true">
+              <div class="mock">
+                <div class="mock-bar"><i></i><i></i><i></i><span>careerhub.app/jobs</span></div>
+                <div class="mock-body">
+                  <div class="mk-search"><svg class="i sm"><use href="#i-search" /></svg><b></b><em>Search</em></div>
+                  <div class="mk-chips"><b></b><b></b><b></b></div>
+                  <div class="mk-row"><span class="mk-logo"></span><div><b class="w70"></b><b class="w40"></b></div><em>Apply</em></div>
+                  <div class="mk-row"><span class="mk-logo alt"></span><div><b class="w60"></b><b class="w30"></b></div><em>Apply</em></div>
+                  <div class="mk-row"><span class="mk-logo"></span><div><b class="w80"></b><b class="w50"></b></div><em>Apply</em></div>
+                </div>
+              </div>
+              <span class="feat-cover-ico"><svg class="i"><use href="#i-briefcase" /></svg></span>
+            </div>
+            <div class="feat-body">
+              <div class="feat-meta">
+                <span class="feat-badge"><svg class="i sm"><use href="#i-star" /></svg> Major project</span>
+                <span class="feat-cat">Full Stack Web Application</span>
+              </div>
+              <h3>CareerHub — Job Alert &amp; Career Guidance Platform</h3>
+              <p class="feat-desc">
+                A full-stack job portal for students, freshers and job seekers. Candidates search and
+                track jobs, manage their resumes and get career guidance, while admins monitor the
+                platform through an analytics dashboard. Built with a React frontend, an Express REST
+                API and MongoDB Atlas.
+              </p>
+              <ul class="feat-points">
+                <li>Job search with advanced filters and pagination</li>
+                <li>Resume upload and management via Cloudinary</li>
+                <li>Saved jobs and application tracking</li>
+                <li>Career resources and newsletter</li>
+                <li>Admin dashboard with analytics and role-based access</li>
+                <li>Secure auth with HttpOnly JWT cookies</li>
+              </ul>
+              <div class="tags">
+                <span>React.js</span><span>Vite</span><span>Tailwind CSS</span><span>Node.js</span>
+                <span>Express.js</span><span>MongoDB Atlas</span><span>JWT</span><span>Cloudinary</span>
+                <span>Playwright</span><span>Render</span><span>Vercel</span>
+              </div>
+              <div class="feat-actions">
+                <a class="btn btn-primary btn-sm" href="https://github.com/jeevan9741/CareerHub" target="_blank" rel="noopener noreferrer">
+                  <svg class="i"><use href="#i-github" /></svg> View on GitHub
+                </a>
+                <span class="feat-deploy"><svg class="i sm"><use href="#i-rocket" /></svg> Vercel + Render · Playwright-tested</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="feat-card flip">
+            <!-- Banner placeholder: replace the .mock block with <img src="assets/academy.png" alt="E-Commerce Training Academy screenshot" /> when you have a screenshot -->
+            <div class="feat-cover c-amber" aria-hidden="true">
+              <div class="mock">
+                <div class="mock-bar"><i></i><i></i><i></i><span>academy.app/courses</span></div>
+                <div class="mock-body">
+                  <div class="mk-video"><span class="mk-play"><svg class="i"><use href="#i-play" /></svg></span><b class="mk-progress"></b></div>
+                  <div class="mk-course">
+                    <div><b class="w70"></b><b class="w40"></b></div>
+                    <em>₹ Buy</em>
+                  </div>
+                  <div class="mk-chips"><b></b><b></b><b></b></div>
+                </div>
+              </div>
+              <span class="feat-cover-ico"><svg class="i"><use href="#i-video" /></svg></span>
+            </div>
+            <div class="feat-body">
+              <div class="feat-meta">
+                <span class="feat-badge"><svg class="i sm"><use href="#i-star" /></svg> Major project</span>
+                <span class="feat-cat">Full Stack E-Learning &amp; E-Commerce Platform</span>
+              </div>
+              <h3>E-Commerce Training Academy</h3>
+              <p class="feat-desc">
+                A complete online learning and digital training platform. Learners preview demo videos,
+                verify their email with an OTP, buy courses through Razorpay, unlock premium content and
+                earn referral commissions. Built with Next.js and TypeScript on PostgreSQL with Prisma ORM.
+              </p>
+              <ul class="feat-points">
+                <li>Multi-language course platform with demo videos</li>
+                <li>Email OTP verification via Resend</li>
+                <li>Secure registration and login with JWT</li>
+                <li>Course purchases with Razorpay payments</li>
+                <li>Course access management and premium video delivery</li>
+                <li>Referral and earnings system</li>
+                <li>Admin dashboard</li>
+                <li>Fully responsive design</li>
+              </ul>
+              <div class="tags">
+                <span>Next.js 16</span><span>React</span><span>TypeScript</span><span>Tailwind CSS</span>
+                <span>Node.js</span><span>Express.js</span><span>PostgreSQL</span><span>Prisma ORM</span>
+                <span>JWT</span><span>Razorpay</span><span>Resend</span><span>Neon</span><span>Vercel</span>
+              </div>
+              <div class="feat-actions">
+                <a class="btn btn-primary btn-sm" href="https://github.com/jeevan9741/Ecommerce_webside" target="_blank" rel="noopener noreferrer">
+                  <svg class="i"><use href="#i-github" /></svg> View on GitHub
+                </a>
+                <span class="feat-deploy"><svg class="i sm"><use href="#i-rocket" /></svg> Vercel · Neon PostgreSQL</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="group-head">
+          <h3>More projects</h3>
+        </div>
+        <div class="proj-grid">
+          <article class="proj-card">
+            <div class="proj-cover c-green"><svg class="i"><use href="#i-leaf" /></svg><span>Full Stack + AI</span></div>
+            <div class="proj-body">
+              <h3>AI-Powered Farmer Advisory System</h3>
+              <p>Web platform that helps farmers manage crops, detect disease and get expert advice.</p>
+              <ul class="proj-points">
+                <li>Gemini AI analyses crop photos to identify disease and suggest treatment</li>
+                <li>React.js dashboard with auth, crop management, market prices and an AI advisor</li>
+                <li>Spring Boot REST APIs on MySQL, integrated end to end via Axios</li>
+              </ul>
+              <div class="tags"><span>Spring Boot</span><span>React.js</span><span>MySQL</span><span>Gemini AI</span></div>
+              <a class="proj-link" href="https://github.com/jeevan9741/AI-powered-farmer-advisor-system" target="_blank" rel="noopener noreferrer"><svg class="i"><use href="#i-github" /></svg> Source code <svg class="i sm"><use href="#i-arrow-up-right" /></svg></a>
+            </div>
+          </article>
+
+          <article class="proj-card">
+            <div class="proj-cover c-violet"><svg class="i"><use href="#i-mic" /></svg><span>AI Security</span></div>
+            <div class="proj-body">
+              <h3>Voice Morphing Detection System</h3>
+              <p>Smart-home security layer that stops morphed and spoofed voice commands.</p>
+              <ul class="proj-points">
+                <li>MFCC-based feature extraction from incoming voice commands</li>
+                <li>Trained ML models to classify genuine vs morphed voice</li>
+                <li>IoT-integrated authentication that blocks spoofing attacks in real time</li>
+              </ul>
+              <div class="tags"><span>Python</span><span>Machine Learning</span><span>IoT</span><span>Audio</span></div>
+            </div>
+          </article>
+
+          <article class="proj-card">
+            <div class="proj-cover c-blue"><svg class="i"><use href="#i-truck" /></svg><span>Full Stack</span></div>
+            <div class="proj-body">
+              <h3>Logistics Tracking System</h3>
+              <p>Shipment platform with a staff console and a public parcel-tracking page.</p>
+              <ul class="proj-points">
+                <li>Staff create shipments and advance them through a checkpoint timeline</li>
+                <li>JWT auth with role-based access and scrypt-hashed passwords</li>
+                <li>REST API on SQLite, covered by 69 API tests</li>
+              </ul>
+              <div class="tags"><span>React</span><span>TypeScript</span><span>Express</span><span>SQLite</span><span>JWT</span></div>
+              <a class="proj-link" href="https://github.com/jeevan9741/Logistics-Tracking-System" target="_blank" rel="noopener noreferrer"><svg class="i"><use href="#i-github" /></svg> Source code <svg class="i sm"><use href="#i-arrow-up-right" /></svg></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="more-head">
+          <h3>Other projects</h3>
+          <a href="https://github.com/jeevan9741?tab=repositories" target="_blank" rel="noopener noreferrer" class="text-link">View all repositories <svg class="i"><use href="#i-arrow-up-right" /></svg></a>
+        </div>
+        <div class="repo-grid">
+          <div class="repo-card static">
+            <div class="repo-top"><svg class="i"><use href="#i-repo" /></svg></div>
+            <h4>Train Ticket Booking System</h4><p>Train ticket booking application in Java.</p>
+            <span class="lang"><i style="--c:#b07219"></i>Java</span>
+          </div>
+          <div class="repo-card static">
+            <div class="repo-top"><svg class="i"><use href="#i-repo" /></svg></div>
+            <h4>Bank Transaction System</h4><p>Banking transaction application in Java.</p>
+            <span class="lang"><i style="--c:#b07219"></i>Java</span>
+          </div>
+          <div class="repo-card static">
+            <div class="repo-top"><svg class="i"><use href="#i-repo" /></svg></div>
+            <h4>Student Management System</h4><p>Student records management application.</p>
+            <span class="lang"><i style="--c:#b07219"></i>Java</span>
+          </div>
+          <div class="repo-card static">
+            <div class="repo-top"><svg class="i"><use href="#i-repo" /></svg></div>
+            <h4>AI Object Detection System</h4><p>AI-based object detection project.</p>
+            <span class="lang"><i style="--c:#f1e05a"></i>JavaScript</span>
+          </div>
+          <div class="repo-card static">
+            <div class="repo-top"><svg class="i"><use href="#i-repo" /></svg></div>
+            <h4>Footer Website</h4><p>Website footer UI component.</p>
+            <span class="lang"><i style="--c:#563d7c"></i>CSS</span>
+          </div>
+          <a class="repo-card" href="https://github.com/jeevan9741/portfolio_webside_system" target="_blank" rel="noopener noreferrer">
+            <div class="repo-top"><svg class="i"><use href="#i-repo" /></svg><svg class="i sm ext"><use href="#i-arrow-up-right" /></svg></div>
+            <h4>Portfolio Website</h4><p>This site — vanilla HTML, CSS and JavaScript.</p>
+            <span class="lang"><i style="--c:#e34c26"></i>HTML</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 SKILLS -->
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow"><span>04</span> Skills</p>
+          <h2>Tools of the trade</h2>
+        </div>
+        <div class="skill-grid">
+          <div class="skill-card">
+            <h3>Languages &amp; Core CS</h3>
+            <ul class="skill-list">
+              <li><img class="ti" src="assets/icons/java.svg" alt="" width="22" height="22" />Java <small>Collections · Multithreading</small></li>
+              <li><img class="ti" src="assets/icons/python.svg" alt="" width="22" height="22" />Python</li>
+              <li><span class="txt-ico">SQL</span>SQL</li>
+              <li><img class="ti" src="assets/icons/javascript.svg" alt="" width="22" height="22" />JavaScript</li>
+              <li><img class="ti" src="assets/icons/html5.svg" alt="" width="22" height="22" />HTML5 &amp; <img class="ti inline" src="assets/icons/css3.svg" alt="" width="22" height="22" />CSS3</li>
+              <li><span class="txt-ico">{ }</span>DSA &amp; OOP</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <h3>Frameworks &amp; APIs</h3>
+            <ul class="skill-list">
+              <li><img class="ti" src="assets/icons/spring.svg" alt="" width="22" height="22" />Spring Boot</li>
+              <li><img class="ti" src="assets/icons/fastapi.svg" alt="" width="22" height="22" />FastAPI</li>
+              <li><img class="ti" src="assets/icons/react.svg" alt="" width="22" height="22" />React.js</li>
+              <li><span class="txt-ico">/api</span>REST APIs</li>
+              <li><span class="txt-ico">LC</span>LangChain</li>
+              <li><span class="txt-ico">AI</span>OpenAI API</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <h3>Databases &amp; Deployment</h3>
+            <ul class="skill-list">
+              <li><img class="ti" src="assets/icons/mysql.svg" alt="" width="22" height="22" />MySQL</li>
+              <li><img class="ti" src="assets/icons/postgresql.svg" alt="" width="22" height="22" />PostgreSQL</li>
+              <li><img class="ti" src="assets/icons/googlecloud.svg" alt="" width="22" height="22" />Google Cloud</li>
+              <li><img class="ti" src="assets/icons/git.svg" alt="" width="22" height="22" />Git</li>
+              <li><img class="ti" src="assets/icons/github.svg" alt="" width="22" height="22" />GitHub</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 EDUCATION -->
+    <section id="education" class="section">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow"><span>05</span> Education</p>
+          <h2>Education &amp; certifications</h2>
+        </div>
+        <div class="edu-grid">
+          <article class="edu-card">
+            <span class="fact-ico lg"><svg class="i"><use href="#i-cap" /></svg></span>
+            <div>
+              <p class="edu-years">2022 — 2026</p>
+              <h3>Bachelor of Engineering — Computer Science &amp; Engineering</h3>
+              <p class="edu-school">City Engineering College, Bengaluru</p>
+              <p class="edu-grade">CGPA <strong>7.88</strong> / 10</p>
+            </div>
+          </article>
+          <div class="cert-list">
+            <article class="cert-card">
+              <span class="fact-ico"><svg class="i"><use href="#i-award" /></svg></span>
+              <div><h4>Java Programming Fundamentals</h4><p>Infosys Springboard</p></div>
+            </article>
+            <article class="cert-card">
+              <span class="fact-ico"><svg class="i"><use href="#i-award" /></svg></span>
+              <div><h4>Data Structures &amp; Algorithms Using Java</h4><p>NPTEL</p></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 CONTACT -->
+    <section id="contact" class="section section-alt">
+      <div class="container">
+        <div class="contact-panel">
+          <div class="contact-intro">
+            <p class="eyebrow"><span>06</span> Contact</p>
+            <h2>Let's build something together</h2>
+            <p>
+              I'm open to Software Developer, Backend Developer and Full Stack Developer
+              opportunities. Whether you have a role, a project or just a question — my
+              inbox is open.
+            </p>
+            <ul class="contact-list">
+              <li>
+                <span class="fact-ico"><svg class="i"><use href="#i-mail" /></svg></span>
+                <a href="mailto:chavanjeevan01@gmail.com">chavanjeevan01@gmail.com</a>
+                <button type="button" class="copy-btn" id="copyEmail" data-email="chavanjeevan01@gmail.com" aria-label="Copy email address">
+                  <svg class="i sm"><use href="#i-copy" /></svg><span>Copy</span>
+                </button>
+              </li>
+              <li>
+                <span class="fact-ico"><svg class="i"><use href="#i-phone" /></svg></span>
+                <a href="tel:+919741214239">+91 97412 14239</a>
+              </li>
+              <li>
+                <span class="fact-ico"><svg class="i"><use href="#i-linkedin" /></svg></span>
+                <a href="https://www.linkedin.com/in/jeevan-480468335" target="_blank" rel="noopener noreferrer">in/jeevan-480468335</a>
+              </li>
+              <li>
+                <span class="fact-ico"><svg class="i"><use href="#i-github" /></svg></span>
+                <a href="https://github.com/jeevan9741" target="_blank" rel="noopener noreferrer">github.com/jeevan9741</a>
+              </li>
+            </ul>
+          </div>
+
+          <form class="contact-form" id="contactForm">
+            <div class="field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@company.com" autocomplete="email" required />
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about the role or project…" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Send message <svg class="i"><use href="#i-send" /></svg></button>
+            <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
-    <p>© 2026 Jeevan Chauhan — Designed &amp; built in Bengaluru</p>
-    <a href="#home" class="top-link">Back to Top ↑</a>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#home" class="brand"><span class="brand-mark">JC</span><span class="brand-name">Jeevan Chauhan</span></a>
+        <p>Java Full Stack Developer building reliable backend systems.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a>
+        <a href="#skills">Skills</a><a href="#contact">Contact</a>
+      </nav>
+      <div class="footer-social">
+        <a href="https://github.com/jeevan9741" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg class="i"><use href="#i-github" /></svg></a>
+        <a href="https://www.linkedin.com/in/jeevan-480468335" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg class="i"><use href="#i-linkedin" /></svg></a>
+        <a href="mailto:chavanjeevan01@gmail.com" aria-label="Email"><svg class="i"><use href="#i-mail" /></svg></a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="year">2026</span> Jeevan Chauhan. Designed &amp; built in Bengaluru.</p>
+      <a href="#home" class="text-link">Back to top <svg class="i sm"><use href="#i-arrow-up" /></svg></a>
+    </div>
   </footer>
+
+  <button class="to-top" id="toTop" aria-label="Back to top"><svg class="i"><use href="#i-arrow-up" /></svg></button>
 
   <script src="script.js"></script>
 </body>
