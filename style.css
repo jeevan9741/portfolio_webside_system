@@ -434,7 +434,10 @@ a.repo-card:hover h4 { color: var(--accent); }
   font-family: var(--font-mono); font-size: 0.6rem; font-weight: 500;
 }
 /* dark logos need lifting on the dark theme */
-[data-theme="dark"] .ti[src$="github.svg"] { filter: invert(1); }
+[data-theme="dark"] .ti[src$="github.svg"],
+[data-theme="dark"] .ti[src$="express.svg"],
+[data-theme="dark"] .ti[src$="nextjs.svg"],
+[data-theme="dark"] .ti[src$="prisma.svg"] { filter: invert(1); }
 [data-theme="dark"] .ti[src$="mysql.svg"] { filter: brightness(2.2) saturate(0.8); }
 
 /* =========================================================
